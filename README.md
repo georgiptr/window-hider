@@ -6,7 +6,7 @@ These days multiple apps are fighting for your attention: Skype, WhatsApp, Viber
 
 Now you can.
 
-![Show Hide Animation](https://github.com/ggeorgip/window-hider/raw/master/Images/showhide.gif)
+![Show Hide Animation](https://github.com/georgiptr/window-hider/raw/master/Images/showhide.gif)
 
 ```
 WindowHider.exe hide viber whatsapp skype inbox messenger gmail
@@ -44,6 +44,8 @@ I keep Gmail's Inbox and Facebook's Messenger into a separate Chrome window. Thi
 If you haven't read [Cal Newport - Deep Work: Rules for Focused Success in a Distracted World](https://www.goodreads.com/book/show/25744928-deep-work) yet, please do.
 
 ### Download
+
+Go to [Releases](https://github.com/georgiptr/window-hider/releases) page and download the latest .EXE
 
 Note: Chrome may warn you that the file is unknown. You can upload the file for online virus check at [VirusTotal](https://www.virustotal.com) or compile it from the source code.
 
