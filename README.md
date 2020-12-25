@@ -68,3 +68,7 @@ Animated:
 
 ![Shortcuts Animation](https://github.com/georgiptr/window-hider/raw/master/Images/showhide2.gif)
 
+### Alternative: Windows 10 Virtual Desktops
+
+Nowadays I'm using an even better alternative: [Windows 10 Virtual Desktops](https://community.windows.com/en-us/stories/virtual-desktop-windows-10). I place all distracting apps on one virtual desktop and all my important apps on another.
+
