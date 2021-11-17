@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Collections.Generic;
 
 namespace WindowHider
 {
@@ -74,9 +74,46 @@ namespace WindowHider
             int style = GetWindowLong(winHwnd, GWL_STYLE);
             return (style & WS_VISIBLE) == WS_VISIBLE;
         }
-        
-        public IEnumerable<string> ModifyWindowState(State state, IEnumerable<string> partialWindowTitles)
+
+        /**
+         * Detects multiple words inside quotes and groups them in a separate string
+         */
+        private IEnumerable<string> GroupTitlesInQuotes(IEnumerable<string> partialWindowTitles)
         {
+            var result = new List<string>();
+            var currentTitle = new StringBuilder();
+            var inQuotes = false;
+            foreach (var title in partialWindowTitles)
+            {
+                if (title.StartsWith("\"") && title.EndsWith("\""))
+                {
+                    if (inQuotes)
+                    {
+                        currentTitle.Append(" ");
+                    }
+                    currentTitle.Append(title.Substring(1, title.Length - 2));
+                    inQuotes = true;
+                }
+                else
+                {
+                    if (inQuotes)
+                    {
+                        currentTitle.Append(" ");
+                    }
+                    currentTitle.Append(title);
+                    inQuotes = false;
+                }
+            }
+            if (currentTitle.Length > 0)
+            {
+                result.Add(currentTitle.ToString());
+            }
+            return result;
+        }
+        
+        public IEnumerable<string> ModifyWindowState(State state, IEnumerable<string> paramPartialWindowTitles)
+        { 
+            var partialWindowTitles = GroupTitlesInQuotes(paramPartialWindowTitles);
             var windows = GetWindows();
             var modifiedWindowTitles = new List<string>();
             foreach (var w in windows)

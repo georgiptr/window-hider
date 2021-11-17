@@ -9,13 +9,13 @@ Now you can.
 ![Show Hide Animation](https://github.com/georgiptr/window-hider/raw/master/Images/showhide.gif)
 
 ```
-WindowHider.exe hide viber whatsapp skype inbox messenger gmail
+WindowHider.exe hide viber whatsapp skype inbox messenger gmail "or some multi-word app title"
 ```
 
 And their windows disappear. Even from the Windows Taskbar. The apps will continue working in the background.
 
 ```
-WindowHider.exe show viber whatsapp skype inbox messenger gmail
+WindowHider.exe show viber whatsapp skype inbox messenger gmail "or some multi-word app title"
 ```
 
 Here they come again.
@@ -23,10 +23,10 @@ Here they come again.
 Another option is to use "toggle" which switches windows visibility.
 
 ```
-WindowHider.exe toggle viber whatsapp skype inbox messenger gmail
+WindowHider.exe toggle viber whatsapp skype inbox messenger gmail "or some multi-word app title"
 ```
 
-All the words coming after show/hide/toggle are used to partially match the window title, case insensitive.
+All the words coming after show/hide/toggle are used to partially match the window title, case insensitive. Quotes to match a single title of multiple words is also supported.
 
 ### A great alternative: Windows 10 Virtual Desktops
 
